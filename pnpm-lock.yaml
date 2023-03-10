@@ -1,52 +1,51 @@
 lockfileVersion: 5.4
 
-specifiers:
-  '@antfu/eslint-config': ^0.35.3
-  '@antfu/ni': ^0.20.0
-  '@antfu/utils': ^0.7.2
-  '@types/fs-extra': ^11.0.1
-  '@types/node': ^18.14.1
-  '@types/prettier': ^2.7.2
-  bumpp: ^9.0.0
-  eslint: ^8.34.0
-  esno: ^0.16.3
-  fs-extra: ^11.1.0
-  glob: ^9.2.1
-  lint-staged: ^13.1.2
-  pnpm: ^7.27.1
-  prettier: ^2.8.4
-  rimraf: ^4.1.2
-  simple-git-hooks: ^2.8.1
-  toyui-clear: ^0.1.0
-  typescript: ^4.9.5
-  unbuild: ^1.1.2
-  vite: ^4.1.4
-  vitest: ^0.28.5
+importers:
 
-dependencies:
-  fs-extra: 11.1.0
-  glob: 9.2.1
-  prettier: 2.8.4
-  toyui-clear: 'link:'
-
-devDependencies:
-  '@antfu/eslint-config': 0.35.3_7kw3g6rralp5ps6mg3uyzz6azm
-  '@antfu/ni': 0.20.0
-  '@antfu/utils': 0.7.2
-  '@types/fs-extra': 11.0.1
-  '@types/node': 18.14.1
-  '@types/prettier': 2.7.2
-  bumpp: 9.0.0
-  eslint: 8.34.0
-  esno: 0.16.3
-  lint-staged: 13.1.2
-  pnpm: 7.27.1
-  rimraf: 4.1.2
-  simple-git-hooks: 2.8.1
-  typescript: 4.9.5
-  unbuild: 1.1.2
-  vite: 4.1.4_@types+node@18.14.1
-  vitest: 0.28.5
+  .:
+    specifiers:
+      '@antfu/eslint-config': ^0.35.3
+      '@antfu/ni': ^0.20.0
+      '@antfu/utils': ^0.7.2
+      '@types/fs-extra': ^11.0.1
+      '@types/node': ^18.14.1
+      '@types/prettier': ^2.7.2
+      bumpp: ^9.0.0
+      eslint: ^8.34.0
+      esno: ^0.16.3
+      fs-extra: ^11.1.0
+      glob: ^9.2.1
+      lint-staged: ^13.1.2
+      pnpm: ^7.27.1
+      prettier: ^2.8.4
+      rimraf: ^4.1.2
+      simple-git-hooks: ^2.8.1
+      typescript: ^4.9.5
+      unbuild: ^1.1.2
+      vite: ^4.1.4
+      vitest: ^0.28.5
+    dependencies:
+      fs-extra: 11.1.0
+      glob: 9.2.1
+      prettier: 2.8.4
+    devDependencies:
+      '@antfu/eslint-config': 0.35.3_7kw3g6rralp5ps6mg3uyzz6azm
+      '@antfu/ni': 0.20.0
+      '@antfu/utils': 0.7.2
+      '@types/fs-extra': 11.0.1
+      '@types/node': 18.14.1
+      '@types/prettier': 2.7.2
+      bumpp: 9.0.0
+      eslint: 8.34.0
+      esno: 0.16.3
+      lint-staged: 13.1.2
+      pnpm: 7.27.1
+      rimraf: 4.1.2
+      simple-git-hooks: 2.8.1
+      typescript: 4.9.5
+      unbuild: 1.1.2
+      vite: 4.1.4_@types+node@18.14.1
+      vitest: 0.28.5
 
 packages:
 
