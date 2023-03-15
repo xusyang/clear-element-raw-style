@@ -1,3 +1,4 @@
+import path from 'path'
 import { describe, expect, it } from 'vitest'
 
 import { clear, clearElementRawClass, clearElementTopClass, isContainElementClass } from '../src'
@@ -9,7 +10,21 @@ describe('should', () => {
   })
 
   it('clearElementRawClass', () => {
-    const res = clearElementRawClass(`
+    const res = clearElementRawClass(`.el-input-number {
+      position: relative;
+      display: -webkit-inline-box;
+      display: -webkit-inline-flex;
+      display: -ms-inline-flexbox;
+      display: inline-flex;
+      width: 150px;
+      line-height: 30px;
+    }
+
+    .el-switch {
+      --el-switch-on-color: var(--el-color-primary);
+      --el-switch-off-color: var(--el-border-color);
+    }
+
     .el-icon {
       position: absolute;
     }
@@ -45,6 +60,7 @@ describe('should', () => {
     .d-el-icon .el-icon .is-loading {
       position: absolute;
     }
+
   `)
 
     expect(res).toMatchInlineSnapshot(`
@@ -97,7 +113,7 @@ describe('should', () => {
 
 describe('clear', () => {
   it('clear dir', () => {
-    const dir = clear('./../../css/css001')
-    expect(dir).toMatchInlineSnapshot('false')
+    const dir = clear(path.join(__dirname, './../../dist-admin-dev'))
+    expect(dir).toMatchInlineSnapshot('true')
   })
 })

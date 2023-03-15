@@ -1,5 +1,3 @@
-import path from 'path'
-
 import fse from 'fs-extra'
 import prettier from 'prettier'
 import { globSync } from 'glob'
@@ -9,7 +7,7 @@ function format(cont: string) {
 }
 
 export function clearElementRawClass(content: string) {
-  const regex = /[\r\n].*\.el-[^\{]+\s*\{[^\}]*\}/g
+  const regex = /([\r\n]*|.*)\.el-[^\{]+\s*\{[^\}]*\}/g
   return format(content.replace(regex, ''))
 }
 
@@ -42,5 +40,5 @@ export function clear(dir: string) {
   paths.forEach((path) => {
     result.push(rewriteCss(path))
   })
-  return result.every((x) => x)
+  return result.every((x: boolean) => !x)
 }
