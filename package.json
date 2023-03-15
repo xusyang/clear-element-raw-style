@@ -1,7 +1,7 @@
 {
   "name": "@deloitte-ui/clear-element-plus-raw-style",
   "type": "module",
-  "version": "0.1.1",
+  "version": "0.1.2",
   "packageManager": "pnpm@7.12.0",
   "description": "element plus 设置样式的命名空间后，打包后依然存在原始的样式，需要清理这些无效的原始样式",
   "author": "Xu Yang <xyantelope@hotmail.com>",
