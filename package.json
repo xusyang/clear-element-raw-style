@@ -46,6 +46,11 @@
     "test": "vitest",
     "typecheck": "tsc --noEmit"
   },
+  "dependencies": {
+    "fs-extra": "^11.1.0",
+    "glob": "^9.2.1",
+    "prettier": "^2.8.4"
+  },
   "devDependencies": {
     "@antfu/eslint-config": "^0.35.3",
     "@antfu/ni": "^0.20.0",
@@ -70,10 +75,5 @@
   },
   "lint-staged": {
     "*": "eslint --fix"
-  },
-  "dependencies": {
-    "fs-extra": "^11.1.0",
-    "glob": "^9.2.1",
-    "prettier": "^2.8.4"
   }
 }
