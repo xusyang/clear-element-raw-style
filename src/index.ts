@@ -36,7 +36,9 @@ export function rewriteCss(filepath: string) {
 
 export function clear(dir: string) {
   const result: boolean[] = []
-  const paths = globSync(`${dir}/**/*.css`)
+  const paths = globSync(`${dir}/**/*.css`, {
+    windowsPathsNoEscape: true,
+  })
   paths.forEach((path) => {
     result.push(rewriteCss(path))
   })
