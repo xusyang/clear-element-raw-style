@@ -1,7 +1,7 @@
 import path from 'path'
 import { describe, expect, it } from 'vitest'
 
-import { clear, clearElementRawClass, clearElementTopClass, isContainElementClass } from '../src'
+import { clear, clearElementRawClass, clearElementTopClass, clearElementVar, isContainElementClass } from '../src'
 
 describe('should', () => {
   it('isContainElementClass', () => {
@@ -105,6 +105,24 @@ describe('should', () => {
 
       .d-el-icon .is-loading {
         position: absolute;
+      }
+      "
+    `)
+  })
+
+  it('clearElementVar', () => {
+    const res = clearElementVar(`
+      :root {
+      --el-color-white: #ffffff;
+      --el-color-white: #ffffff;
+      --el-color-white: #ffffff;
+      --el-color-white: #ffffff;
+      --el-color-white: #ffffff;
+     }
+    `)
+
+    expect(res).toMatchInlineSnapshot(`
+      ":root {
       }
       "
     `)

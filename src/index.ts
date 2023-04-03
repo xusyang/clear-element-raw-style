@@ -11,6 +11,11 @@ export function clearElementRawClass(content: string) {
   return format(content.replace(regex, ''))
 }
 
+export function clearElementVar(content: string) {
+  const regex = /\s+--el-[^;]*;/g
+  return format(content.replace(regex, ''))
+}
+
 /**
  * 删除 d-el-icon 的类
  * @param content
@@ -30,6 +35,7 @@ export function rewriteCss(filepath: string) {
   cont = format(cont)
   cont = clearElementRawClass(cont)
   cont = clearElementTopClass(cont)
+  cont = clearElementVar(cont)
   fse.writeFileSync(filepath, cont, 'utf-8')
   return isContainElementClass(cont)
 }
